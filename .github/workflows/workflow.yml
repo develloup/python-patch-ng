@@ -5,13 +5,12 @@ jobs:
     runs-on: [ ubuntu-latest ]
     strategy:
       matrix:
-        python: [ '3.x', 'pypy3' ]
+        python: [ '3.9', '3.10', '3.11', '3.12' ]
     name: Python ${{ matrix.python }} Testing
     steps:
       - uses: actions/checkout@master
       - name: Setup python
-        uses: actions/setup-python@v1
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-          architecture: x64
       - run: python tests/run_tests.py
