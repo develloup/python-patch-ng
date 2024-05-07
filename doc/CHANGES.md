@@ -1,3 +1,6 @@
+##### 1.17
+  - Removed depreated warnings with more recent Python versions (3.x)
+
 ##### 1.16
 
   - Python 3 support, thanks to Yen Chi Hsuan (@yan12125)
